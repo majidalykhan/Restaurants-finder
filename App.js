@@ -9,7 +9,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Search Screen" component={SearchScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
