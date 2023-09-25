@@ -22,13 +22,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   inputStyle: {
-    borderWidth: 3,
-    borderColor: "black",
     flex: 1,
-    marginLeft: 10,
+    marginHorizontal: 5,
   },
   iconStyle: {
-    marginLeft: 5,
+    marginHorizontal: 5,
   },
 });
 
