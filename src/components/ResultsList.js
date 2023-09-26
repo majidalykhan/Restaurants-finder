@@ -10,6 +10,10 @@ import { useNavigation } from "@react-navigation/native";
 import ResultsDetail from "./ResultsDetail";
 
 const ResultsList = ({ title, results }) => {
+  if (!results.length) {
+    return null;
+  }
+
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -23,7 +27,7 @@ const ResultsList = ({ title, results }) => {
           return (
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate("Results Show Screen", { id: item.id })
+                navigation.navigate("Restaurant Details", { id: item.id })
               }
             >
               <ResultsDetail result={item} />

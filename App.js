@@ -11,10 +11,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Search Screen" component={SearchScreen} />
-        <Stack.Screen
-          name="Results Show Screen"
-          component={ResultsShowScreen}
-        />
+        <Stack.Screen name="Restaurant Details" component={ResultsShowScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
