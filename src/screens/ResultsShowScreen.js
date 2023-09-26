@@ -15,13 +15,36 @@ const ResultsShowScreen = ({ route }) => {
     getResult(id);
   }, []);
 
+  if (!result) {
+    return null;
+  }
+
   return (
-    <View>
-      <Text>Results Show Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.name}>{result.name}</Text>
+      <FlatList
+        data={result.photos}
+        keyExtractor={(photo) => photo}
+        renderItem={({ item }) => {
+          return <Image style={styles.photoStyle} source={{ uri: item }} />;
+        }}
+      />
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: { backgroundColor: "#ffffff" },
+  name: {
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 10,
+  },
+  photoStyle: {
+    width: 250,
+    height: 150,
+  },
+});
 
 export default ResultsShowScreen;
